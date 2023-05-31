@@ -38,12 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
         tasks.unshift(data);
         // simpan isi variabel "tasks" kedalam localstorage
         saveToLocalstorage();
-        // render element dan tampilkan element tersebut
-        showUI(data);
         // beri pesan bahwa "data berhasil ditambahkan"
         alerts('success', 'Data has been added!');
-        // update total pembayaran
-        updateTotalCart();
         // tampilkan data yang ada didalam localstorage
         loadData();
         
@@ -205,8 +201,6 @@ window.addEventListener('DOMContentLoaded', () => {
         tasks.splice(index, 1);
         // simpan perubahan data kedalam localstorage
         saveToLocalstorage();
-        // update total pembayaran
-        updateTotalCart();
         // berikan pesan bahwq "data berhasil dihapus"
         alerts('success', 'Data has been deleted!');
         // load data yang ada didalam localstorage
@@ -232,8 +226,6 @@ window.addEventListener('DOMContentLoaded', () => {
       tasks = [];
       // simpan perubahan data tersebut kedalam localstorage
       saveToLocalstorage();
-      // update total pembayaran
-      updateTotalCart();
       /*
         berikan pesan bahwwa data yang dibeli berapa jumlahnya dan berapa total 
         pembayarannya
